@@ -1,0 +1,407 @@
+* {
+    font-size: 18px;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+@media only screen and (max-width: 375px) {
+    header {
+        width: 100%;
+        color: hsl(0, 0%, 41%);
+        display: flex;
+        margin: 1rem;
+        gap: clamp(11rem, 30vh, 15rem);
+    }
+    
+    .toggle {
+        margin-bottom: 2rem;
+        position: absolute;
+        z-index: 9999;
+        background: url("images/icon-menu.svg");
+        background-repeat: no-repeat;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 1rem;
+        right: 2rem;
+        border: none;
+    }
+    
+    nav[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    
+    nav {
+        display: block;
+        position: fixed;
+        inset: 0 0 0 35%;
+        background-color: hsl(0, 0%, 98%);
+        opacity: 1;
+        transform: translateX(100%);
+        transition: transform 500ms cubic-bezier(0.73, 0.15, 0.82, 1.43);
+    }
+    
+    .menu_close {
+        margin-bottom: 1rem;
+        margin-top: 20px;
+        margin-left: 70%;
+     }
+
+     #hero_img {
+        width: 100%;
+        height: 280px;
+        margin-bottom: 2.5rem;
+        background-image: url("images/image-hero-mobile.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .nav_links {
+        margin-top: 5rem;
+        list-style: none;
+        display: block;
+        font-weight: 300;
+    }
+    
+    .nav_links li {
+        margin-bottom: 1em;
+    }
+    
+    .nav_links li:last-child {
+        margin-bottom: 2em;
+    }
+    
+    .feat {
+        display: none;
+        z-index: 9999;
+        
+    }
+    
+    .featbtn {
+        border: none;
+        background-color: transparent;
+        font-family: 'Epilogue', sans-serif;
+        color: hsl(0, 0%, 41%);
+    }
+    
+    .feat ul{
+        list-style: none;
+        margin: 1rem 0 0 1.5rem;
+        padding: 0;
+    }
+    
+    .feat ul li  a {
+        text-decoration: none;
+        color: hsl(0, 0%, 41%);
+    }
+    
+    
+    
+    .sign_up {
+        list-style: none;
+        display: block; 
+        }
+    
+    .sign_up li:nth-child(1) {
+        margin: 0 auto;
+        margin-bottom: 1em;
+        margin-left: 4rem;
+        font-weight: 100;
+        font-size: 16px;
+    }
+    
+    .sign_up li button {
+        border: 2px solid hsl(0, 0%, 41%);
+        border-radius: 10px;
+        background-color: hsl(0, 0%, 98%);
+        color: hsl(0, 0%, 41%);
+        width: auto;
+        padding: .5rem 3rem .5rem 3rem;
+    }    
+    
+    main {
+        margin: 0;
+    }
+    
+    
+    .intro {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .intro h1 {
+        font-size: 1.8rem;
+        color: hsl(0, 0%, 8%);
+        font-weight: 900; 
+    }
+    
+    .intro p {
+        color: hsl(0, 0%, 41%);
+        font-size: 16px;
+        line-height: 1.5em;
+        margin: 1em;
+    }
+    
+    .intro button {
+        border-radius: 13px;
+        border: 1px solid hsl(0, 0%, 98%);
+        background-color: hsl(0, 0%, 8%);
+        color: hsl(0, 0%, 98%);
+        width: auto;
+        height: auto;
+        padding: .8em;
+        margin-bottom: 2rem;
+    }
+    
+    .intro button:hover {
+        background-color: hsl(0, 0%, 98%);
+        border: 1px solid hsl(0, 0%, 8%);
+        color: hsl(0, 0%, 8%);
+        font-weight: bolder;
+    }
+    
+    
+}
+
+footer {
+    display: flex;
+    gap: 1rem;
+    margin: 1em;
+}
+
+footer img {
+    width: 25%;
+    height: 1.2rem;
+}
+
+@media screen and (min-width: 678px) and (max-width: 1920px) {
+    .toggle {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        height: 1rem;
+        display: flex;
+        margin: 1em 0 0 2rem;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 25px;
+        margin-top: 1rem;
+    }
+
+    nav {
+        display: flex;
+        gap: 33rem;
+        text-align: center;
+        width: auto;
+        position: fixed;
+        margin-bottom: 2rem;
+    }
+    
+    .nav_links {
+        display: flex;
+        list-style: none;
+        gap: 3rem;
+        margin: 0;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        height: auto;
+    }
+
+
+
+    .nav_links li {
+        color: hsl(0, 0%, 41%);
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .nav_links li:hover {
+        color: hsl(0, 0%, 8%);
+    }
+
+    .sign_up {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        gap: 3rem;
+    }
+
+    .sign_up li {
+        cursor: pointer;
+        color: hsl(0, 0%, 41%);
+        font-size: 10px;
+    }
+
+    .sign_up li:nth-child(1){
+        margin-top: .6rem;
+    }
+
+    .sign_up li:hover {
+        color: hsl(0, 0%, 8%);
+    }
+
+    .sign_up li button {
+        border: 2px solid hsl(0, 0%, 41%);
+        border-radius: 10px;
+        background-color: hsl(0, 0%, 98%);
+        color: hsl(0, 0%, 41%);
+        width: auto;
+        padding: .5rem 1rem .5rem 1rem;
+        margin: 0;
+    }    
+    
+    .sign_up li button:hover {
+        color: hsl(0, 0%, 8%);
+        border: 2px solid hsl(0, 0%, 8%);
+    }
+
+    .feat {
+        display: none;
+        z-index: 9999;
+    }
+    
+    .featbtn {
+        border: none;
+        background-color: transparent;
+        font-family: 'Epilogue', sans-serif;
+        font-size: 12px;
+        color: hsl(0, 0%, 41%);
+    }
+
+    .featbtn:hover {
+        color: hsl(0, 0%, 8%);
+    }
+    
+    .feat ul{
+        list-style: none;
+        padding: 0;
+    }
+    
+    .feat ul li  a {
+        text-decoration: none;
+        color: hsl(0, 0%, 41%);
+        font-size: 12px;
+    }
+
+    .feat ul li  a  img {
+        width: 12px;
+    }
+    
+    main {
+        display: grid;
+        grid-template-columns: 50% 40%;
+        grid-template-areas: "left right";
+        height: clamp(20rem, 10vh, 30rem);
+        gap: 10%;
+        margin: 3.5rem 5rem 0 7rem;
+        min-height: 30rem;
+        max-height: 50rem;
+    }
+
+    
+    #hero_img {
+        width: 100%;
+        background-image: url("images/image-hero-desktop.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        grid-area: right;
+        height: auto;
+        grid-row: 1/4;
+    }
+
+    .intro {
+        grid-row: 2/3;
+    }
+
+    .intro h1 {
+        font-size: clamp(2rem, 50vh, 4.1rem) ;
+        margin: 0;
+        margin-bottom: 2rem;
+        line-height: clamp(.8em 2vh 1em);
+    }
+
+    .intro p {
+        font-size: 12px;
+        color: hsl(0, 0%, 41%);
+        width: 22rem;
+        margin-bottom: 2rem;
+    }
+
+    .intro button {
+        border: none;
+        border-radius: 15px;
+        background-color: hsl(0, 0%, 8%);
+        color: hsl(0, 0%, 98%);
+        width: auto;
+        height: auto;
+        padding: .9rem;
+    }
+
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin: 1em;
+        grid-row: 3/4;
+    }
+    
+    footer img {
+        width: 2rem;
+        height: 1rem;
+    }
+    
+    .feat {
+        background-color:  white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 5px hsl(0, 0%, 98%);
+        padding: 0.2rem;
+        width: auto;
+        height: auto;
+        
+    }
+
+    .feat1 {
+        width: 8rem;
+    }
+
+    .feat1, .feat2 {
+        margin-top: 1rem;
+    }
+
+    .feat2 ul{
+        margin: 1rem 1rem 1rem 1rem;
+    }
+
+    .feat li {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    .sign_up li:nth-child(1) {
+        font-weight: 100;
+        font-size: 16px;
+    }
+    
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin: 1em;
+    }
+    
+    footer img {
+        width: 15%;
+        aspect-ratio: 1/1;
+    }
+}
